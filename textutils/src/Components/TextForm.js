@@ -15,7 +15,7 @@ export default function TextForm(props) {
 
     const calculateLengths = (event) => {
         let newText = event.target.value
-        setWords(newText.trim().split(/[ ,]+/).length)
+        setWords(newText.trim().split(/[\s,]+/).length)
         if(newText==='') setWords(0)
         setCharacters(newText.length)
     }
@@ -40,12 +40,12 @@ export default function TextForm(props) {
             <div className="container" style={{color: props.secondary}}>
                 <h1 className="my-2">{props.heading}</h1>
                 <div className="mb-3">
-                    <textarea className="form-control" id="textForm" rows="6" value={text} style={{color: props.secondary, backgroundColor: props.primary}} onChange={handleOnChange}></textarea>
+                    <textarea className="form-control" id="textForm" rows="6" value={text} style={{color: props.secondary, borderColor: props.secondary, backgroundColor: props.primary}} onChange={handleOnChange}></textarea>
                 </div>
-                <button style={{color: props.primary, backgroundColor: props.secondary, borderColor: props.secondary}} className="btn btn-primary mx-1" onClick={handleUpperCase}>To Upper Case</button>
-                <button style={{color: props.primary, backgroundColor: props.secondary, borderColor: props.secondary}} className="btn btn-primary mx-1" onClick={handleLowerCase}>To Lower Case</button>
-                <button style={{color: props.primary, backgroundColor: props.secondary, borderColor: props.secondary}} className="btn btn-primary mx-1" onClick={handleClearText}>Clear Text</button>
-                <button style={{color: props.primary, backgroundColor: props.secondary, borderColor: props.secondary}} className="btn btn-primary mx-1" onClick={handleCopyText}>Copy Text</button>
+                <button disabled={characters===0} style={{color: props.primary, backgroundColor: props.secondary, borderColor: props.secondary}} className="btn btn-primary mx-1 my-1" onClick={handleUpperCase}>To Upper Case</button>
+                <button disabled={characters===0} style={{color: props.primary, backgroundColor: props.secondary, borderColor: props.secondary}} className="btn btn-primary mx-1 my-1" onClick={handleLowerCase}>To Lower Case</button>
+                <button disabled={characters===0} style={{color: props.primary, backgroundColor: props.secondary, borderColor: props.secondary}} className="btn btn-primary mx-1 my-1" onClick={handleClearText}>Clear Text</button>
+                <button disabled={characters===0} style={{color: props.primary, backgroundColor: props.secondary, borderColor: props.secondary}} className="btn btn-primary mx-1 my-1" onClick={handleCopyText}>Copy Text</button>
             </div>
             <div className="container my-3" style={{color: props.secondary}}>
                 <h2>Text Summary</h2>

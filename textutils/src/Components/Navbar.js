@@ -3,27 +3,10 @@ import PropTypes from 'prop-types'
 
 export default function Navbar(props) {
 
-  const handleSwitchColor = (index) => {
-    switch (props.mode) {
-      case 'dark':
-        props.setPrimary(props.themes.dark.primary[index])
-        props.setSecondary(props.themes.dark.secondary[index])
-        break;
-    
-      case 'light':
-        props.setPrimary(props.themes.light.primary[index])
-        props.setSecondary(props.themes.light.secondary[index])
-        break;
-      default:
-        break;
-    }
-    
-  }
-
   return (
-    <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
+    <nav className={`navbar navbar-expand-lg rounded-bottom`} style={{ background: `linear-gradient(${props.mode==='light'? 'white': 'black'},${props.primary})`, borderBottom: "0.2px inset", borderBottomColor: props.secondary}}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <a className="navbar-brand" style={{color: props.secondary}} href="/">
           {props.title}
         </a>
         <button
@@ -40,43 +23,33 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">
+              <a className="nav-link active" style={{color: props.secondary}} aria-current="page" href="/">
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <a className="nav-link" style={{color: props.secondary}} href="/">
                 About Us
               </a>
             </li>
           </ul>
-          <div className="btn-group mx-2" data-bs-theme={props.mode} role="group" aria-label="Button group with nested dropdown">
+          <div className="btn-group mx-2 my-2" role="group" aria-label="Button group with nested dropdown">
             <div className="btn-group" role="group">
-              <button type="button" className={`btn btn-${props.mode} dropdown-toggle`} data-bs-toggle="dropdown" aria-expanded="false">
+              <button type="button" className={`btn btn-primary dropdown-toggle`} style={{background: `linear-gradient(transparent, transparent)`, color: props.secondary, borderColor: props.secondary}} data-bs-toggle="dropdown" aria-expanded="false">
                 Choose Colors
               </button>
-              <ul className="dropdown-menu">
+              <ul className="dropdown-menu" id="color-palette" style={{backgroundColor: props.primary, border: "1px solid", borderColor: props.secondary, boxShadow: `1px 1px 10px 0px ${props.secondary}`}} >
                 {props.mode==='dark' && props.themes.dark.primary.map((item, index) => (
-                  <li><a className="dropdown-item" key={index} onClick={handleSwitchColor(index)} href="/">{item}</a></li>
+                  <li className="mx-2 my-1" key={`color-button-${index}`}><button type="button" style={{width: "100%", background: `linear-gradient(transparent, black)`, color: props.secondary, border: "0.5px solid", borderColor: props.secondary}} id={`dark-color-button-${index}`} className="btn btn-primary" onClick={props.handleSwitchColor} value={index}> {item}/{props.themes.dark.secondary[index]}</button></li>
                 ))}
                 {props.mode==='light' && props.themes.light.primary.map((item, index) => (
-                  <li><a className="dropdown-item" key={index} onClick={handleSwitchColor(index)} href="/">{item}</a></li>
+                  <li className="mx-2 my-1" key={`color-button-${index}`}><button type="button" style={{width: "100%", background: `linear-gradient(transparent, white)`, color: props.secondary, border: "0.5px solid", borderColor: props.secondary}} id={`light-color-button-${index}`} className="btn btn-primary" onClick={props.handleSwitchColor} value={index}> {item}/{props.themes.light.secondary[index]}</button></li>
                 ))}
-                {/* <li>
-                  <button type="button" className={`btn btn-${props.mode}`}>
-                    Color 1
-                  </button>
-                </li>
-                <li>
-                  <button type="button" className={`btn btn-${props.mode}`}>
-                    Color 2
-                  </button>
-                </li> */}
               </ul>
             </div>
           </div>
-          <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark' : 'light'}`}>
-            <input className="form-check-input" type="checkbox" role="switch" id="modeSwitch" onChange={props.switchMode} />
+          <div className="form-check form-switch my-1" style={{background: `linear-gradient(transparent, transparent)`, color: props.secondary}}>
+            <input className="form-check-input" type="checkbox" role="switch" id="modeSwitch" onChange={props.switchMode} style={{}}/>
             <label className="form-check-label" htmlFor="modeSwitch">{props.mode === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}</label>
           </div>
         </div>
