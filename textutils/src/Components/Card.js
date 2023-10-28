@@ -2,7 +2,7 @@ import React from 'react'
 import noimage from '../Images/no-image.png'
 import { Link } from 'react-router-dom'
 
-export default function Application(props) {
+export default function Card(props) {
     return (
         <div className="col-3 mx-2 my-2 rounded" style={{ width: "300px", borderColor: props.primary, backgroundColor: props.primary, boxShadow: `1px 1px 10px 0px ${props.secondary}` }}>
             <div className="p-3">
