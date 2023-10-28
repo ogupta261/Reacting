@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import TextForm from "./Components/TextForm";
 import Alert from "./Components/Alert";
+import Home from "./Components/Home";
+import About from "./Components/About";
 
 function App() {
   const [mode, setMode] = useState('light')
@@ -11,6 +14,8 @@ function App() {
   const [secondary, setSecondary] = useState('black');
   const [darkTheme, setDarkTheme] = useState(0);
   const [lightTheme, setLightTheme] = useState(0);
+  const [activePage, setActivePage] = useState('');
+  
 
   const themes = {
     light: {
@@ -22,6 +27,41 @@ function App() {
       secondary: ['white', 'lightcyan', 'lightblue', 'lightgrey']
     }
   }
+
+  const titles = {
+    '': 'Home',
+    'text-utils': 'Text Utils',
+    'about-us': 'About Us'
+  }
+
+  useEffect(() => {
+    switch (mode) {
+      case 'light':
+        for (let i = 0; i < themes.light.primary.length; i++) {
+          if ((lightTheme - i) === 0) {
+            document.getElementById("light-color-button-" + i).disabled = true
+            document.getElementById("currentLightTheme-" + i).hidden = false
+          } else {
+            document.getElementById("light-color-button-" + i).disabled = false
+            document.getElementById("currentLightTheme-" + i).hidden = true
+          }
+        }
+        break;
+      case 'dark':
+        for (let i = 0; i < themes.dark.primary.length; i++) {
+          if ((darkTheme - i) === 0) {
+            document.getElementById("dark-color-button-" + i).disabled = true
+            document.getElementById("currentDarkTheme-" + i).hidden = false
+          } else {
+            document.getElementById("dark-color-button-" + i).disabled = false
+            document.getElementById("currentDarkTheme-" + i).hidden = true
+          }
+        }
+        break;
+      default:
+        break;
+    }
+  });
 
   const showAlert = (message, type, time) => {
     setAlert({
@@ -52,34 +92,6 @@ function App() {
         break;
     }
   }
-  useEffect(() => {
-    switch (mode) {
-      case 'light':
-        for (let i = 0; i < themes.light.primary.length; i++) {
-          if ((lightTheme - i) === 0) {
-            document.getElementById("light-color-button-" + i).disabled = true
-            document.getElementById("currentLightTheme-"+i).hidden = false
-          } else {
-            document.getElementById("light-color-button-" + i).disabled = false
-            document.getElementById("currentLightTheme-"+i).hidden = true
-          }
-        }
-        break;
-      case 'dark':
-        for (let i = 0; i < themes.dark.primary.length; i++) {
-          if ((darkTheme - i) === 0) {
-            document.getElementById("dark-color-button-" + i).disabled = true
-            document.getElementById("currentDarkTheme-"+i).hidden = false
-          } else {
-            document.getElementById("dark-color-button-" + i).disabled = false
-            document.getElementById("currentDarkTheme-"+i).hidden = true
-          }
-        }
-        break;
-      default:
-        break;
-    }
-  });
 
   const handleSwitchColor = (event) => {
     let index = event.target.value
@@ -103,9 +115,17 @@ function App() {
   }
   return (
     <>
-      <Navbar title='Text Utils' themes={themes} handleSwitchColor={handleSwitchColor} darkTheme={darkTheme} lightTheme={lightTheme} primary={primary} secondary={secondary} mode={mode} switchMode={switchMode} />
-      <Alert alert={alert} />
-      <TextForm heading='Enter Text Below' showAlert={showAlert} primary={primary} secondary={secondary} mode={mode} />
+      <Router>
+        <Navbar titles={titles} activePage={activePage} themes={themes} handleSwitchColor={handleSwitchColor} darkTheme={darkTheme} lightTheme={lightTheme} primary={primary} secondary={secondary} mode={mode} switchMode={switchMode} />
+        <Alert alert={alert} />
+        <div className="container my-3">
+          <Routes>
+            <Route exact path='/' element={<Home primary={primary} secondary={secondary} setActivePage={setActivePage} />} />
+            <Route exact path='/text-utils' element={<TextForm heading='Enter Text Below' showAlert={showAlert} primary={primary} secondary={secondary} setActivePage={setActivePage} />} />
+            <Route exact path='/about-us' element={<About primary={primary} secondary={secondary} setActivePage={setActivePage} />} />
+          </Routes>
+        </div>
+      </Router>
     </>
   );
 }
