@@ -6,6 +6,8 @@ import TextForm from "./Components/TextForm";
 import Alert from "./Components/Alert";
 import Home from "./Components/Home";
 import About from "./Components/About";
+import Footer from "./Components/Footer";
+import bgImage from "./Images/abstract_pattern_design_background_2007.jpg"
 
 function App() {
   const [mode, setMode] = useState('light')
@@ -15,7 +17,7 @@ function App() {
   const [darkTheme, setDarkTheme] = useState(0);
   const [lightTheme, setLightTheme] = useState(0);
   const [activePage, setActivePage] = useState('');
-  
+
 
   const themes = {
     light: {
@@ -26,6 +28,17 @@ function App() {
       primary: ['black', 'darkslateblue', 'black', 'darkslategrey'],
       secondary: ['white', 'lightcyan', 'lightblue', 'lightgrey']
     }
+  }
+  const color_codes = {
+    "white": [255,255,255],
+    "lightcyan": [224, 255, 255],
+    "lightblue": [173, 216, 230],
+    "lightgrey": [211, 211, 211],
+    "black": [0, 0, 0],
+    "darkblue": [0, 0, 139],
+    "darkgreen": [0, 100, 0],
+    "darkslateblue": [72, 61, 139],
+    "darkslategrey": [47, 79, 79]
   }
 
   const titles = {
@@ -77,16 +90,14 @@ function App() {
     setMode(mode === 'light' ? 'dark' : 'light')
     switch (mode) {
       case 'dark':
-        document.body.style.backgroundColor = themes.light.primary[lightTheme]
         setPrimary(themes.light.primary[lightTheme])
         setSecondary(themes.light.secondary[lightTheme])
-        showAlert('Light mode has been set!', 'success', 500)
+        showAlert('Light mode has been set!', 'success', 1000)
         break;
       case 'light':
-        document.body.style.backgroundColor = themes.dark.primary[darkTheme]
         setPrimary(themes.dark.primary[darkTheme])
         setSecondary(themes.dark.secondary[darkTheme])
-        showAlert('Dark mode has been set!', 'success', 500)
+        showAlert('Dark mode has been set!', 'success', 1000)
         break;
       default:
         break;
@@ -97,14 +108,12 @@ function App() {
     let index = event.target.value
     switch (mode) {
       case 'dark':
-        document.body.style.backgroundColor = themes.dark.primary[index]
         setPrimary(themes.dark.primary[index])
         setSecondary(themes.dark.secondary[index])
         setDarkTheme(index)
         break;
 
       case 'light':
-        document.body.style.backgroundColor = themes.light.primary[index]
         setPrimary(themes.light.primary[index])
         setSecondary(themes.light.secondary[index])
         setLightTheme(index)
@@ -115,17 +124,21 @@ function App() {
   }
   return (
     <>
-      <Router>
-        <Navbar titles={titles} activePage={activePage} themes={themes} handleSwitchColor={handleSwitchColor} darkTheme={darkTheme} lightTheme={lightTheme} primary={primary} secondary={secondary} mode={mode} switchMode={switchMode} />
-        <Alert alert={alert} />
-        <div className="container my-3">
-          <Routes>
-            <Route exact path='/' element={<Home primary={primary} secondary={secondary} setActivePage={setActivePage} />} />
-            <Route exact path='/text-utils' element={<TextForm heading='Enter Text Below' showAlert={showAlert} primary={primary} secondary={secondary} setActivePage={setActivePage} />} />
-            <Route exact path='/about-us' element={<About primary={primary} secondary={secondary} setActivePage={setActivePage} />} />
-          </Routes>
-        </div>
-      </Router>
+      <div className="d-flex flex-column content-container" style={{ background: `linear-gradient(rgba(${color_codes[primary][0]},${color_codes[primary][1]},${color_codes[primary][2]}, 0.7) 100%, rgba(${color_codes[primary][0]},${color_codes[primary][1]},${color_codes[primary][2]}, 0.7) 100%), url(${bgImage})`}}>
+        <Router>
+          <Navbar titles={titles} activePage={activePage} themes={themes} color_codes={color_codes} handleSwitchColor={handleSwitchColor} darkTheme={darkTheme} lightTheme={lightTheme} primary={primary} secondary={secondary} mode={mode} switchMode={switchMode} />
+          
+          <div className="container">
+            <Alert alert={alert} primary={primary} secondary={secondary} />
+            <Routes>
+              <Route exact path='/' element={<Home primary={primary} secondary={secondary} setActivePage={setActivePage} />} />
+              <Route exact path='/text-utils' element={<TextForm heading='Enter Text Below' showAlert={showAlert} primary={primary} secondary={secondary} setActivePage={setActivePage} />} />
+              <Route exact path='/about-us' element={<About primary={primary} secondary={secondary} setActivePage={setActivePage} />} />
+            </Routes>
+          </div>
+        </Router>
+      </div>
+      <Footer primary={primary} secondary={secondary} />
     </>
   );
 }
