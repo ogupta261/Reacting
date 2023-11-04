@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Reacting/static/css/main.10d6d5b6.css",
-    "main.js": "/Reacting/static/js/main.f8785528.js",
+    "main.js": "/Reacting/static/js/main.5299b1a2.js",
     "static/js/787.719ec76d.chunk.js": "/Reacting/static/js/787.719ec76d.chunk.js",
     "static/media/abstract_pattern_design_background_2007.jpg": "/Reacting/static/media/abstract_pattern_design_background_2007.54c479bbfeef7cb872f8.jpg",
     "static/media/more.gif": "/Reacting/static/media/more.3fb26d9b3c3c823ae786.gif",
@@ -9,11 +9,11 @@
     "static/media/om-gupta.jpeg": "/Reacting/static/media/om-gupta.66e82c830ccdc70d8883.jpeg",
     "index.html": "/Reacting/index.html",
     "main.10d6d5b6.css.map": "/Reacting/static/css/main.10d6d5b6.css.map",
-    "main.f8785528.js.map": "/Reacting/static/js/main.f8785528.js.map",
+    "main.5299b1a2.js.map": "/Reacting/static/js/main.5299b1a2.js.map",
     "787.719ec76d.chunk.js.map": "/Reacting/static/js/787.719ec76d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.10d6d5b6.css",
-    "static/js/main.f8785528.js"
+    "static/js/main.5299b1a2.js"
   ]
 }
