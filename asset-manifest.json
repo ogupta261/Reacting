@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/Reacting/static/css/main.073c9b0a.css",
-    "main.js": "/Reacting/static/js/main.40a95f66.js",
+    "main.css": "/Reacting/static/css/main.10d6d5b6.css",
+    "main.js": "/Reacting/static/js/main.f51d9ad2.js",
     "static/js/787.719ec76d.chunk.js": "/Reacting/static/js/787.719ec76d.chunk.js",
+    "static/media/abstract_pattern_design_background_2007.jpg": "/Reacting/static/media/abstract_pattern_design_background_2007.54c479bbfeef7cb872f8.jpg",
     "static/media/more.gif": "/Reacting/static/media/more.3fb26d9b3c3c823ae786.gif",
     "static/media/text-utils.png": "/Reacting/static/media/text-utils.3f708f11a0f6708cbbc9.png",
     "static/media/om-gupta.jpeg": "/Reacting/static/media/om-gupta.66e82c830ccdc70d8883.jpeg",
     "index.html": "/Reacting/index.html",
-    "main.073c9b0a.css.map": "/Reacting/static/css/main.073c9b0a.css.map",
-    "main.40a95f66.js.map": "/Reacting/static/js/main.40a95f66.js.map",
+    "main.10d6d5b6.css.map": "/Reacting/static/css/main.10d6d5b6.css.map",
+    "main.f51d9ad2.js.map": "/Reacting/static/js/main.f51d9ad2.js.map",
     "787.719ec76d.chunk.js.map": "/Reacting/static/js/787.719ec76d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.40a95f66.js"
+    "static/css/main.10d6d5b6.css",
+    "static/js/main.f51d9ad2.js"
   ]
 }
