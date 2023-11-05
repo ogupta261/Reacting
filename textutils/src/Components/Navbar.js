@@ -5,22 +5,22 @@ import { Link } from 'react-router-dom'
 export default function Navbar(props) {
 
   return (
-    <nav className={`navbar navbar-expand-lg animate`} style={{ background: `linear-gradient(${props.mode === 'light' ? 'white' : 'black'},${props.primary})` }}>
+    <nav className={`navbar navbar-expand-lg animate`} style={{ background: `linear-gradient(${props.primary} 37%, transparent)` }}>
       <div className="container-fluid">
         <span className="navbar-brand fw-bold text-center fs-1 animate justify-content-center align-self-center" style={{ color: props.secondary, padding: "0.4%", width: "11%" }}>
           {props.titles[props.activePage]}
         </span>
         <button
           className="navbar-toggler"
-          type="button"
+          type="button" 
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          style={{ borderColor: props.secondary}}
+          style={{ borderColor: props.secondary }}
         >
-          <span className="navbar-toggler-icon" style={{backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(${props.color_codes[props.secondary][0]},${props.color_codes[props.secondary][1]},${props.color_codes[props.secondary][2]}, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")`}}>
+          <span className="navbar-toggler-icon" style={{ backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(${props.color_codes[props.secondary][0]},${props.color_codes[props.secondary][1]},${props.color_codes[props.secondary][2]}, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")` }}>
           </span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">

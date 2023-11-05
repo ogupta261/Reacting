@@ -30,15 +30,15 @@ function App() {
     }
   }
   const color_codes = {
-    "white": [255,255,255],
-    "lightcyan": [224, 255, 255],
-    "lightblue": [173, 216, 230],
-    "lightgrey": [211, 211, 211],
-    "black": [0, 0, 0],
-    "darkblue": [0, 0, 139],
-    "darkgreen": [0, 100, 0],
-    "darkslateblue": [72, 61, 139],
-    "darkslategrey": [47, 79, 79]
+    "white": [255,255,255,'ffffff'],
+    "lightcyan": [224, 255, 255,'e0ffff'],
+    "lightblue": [173, 216, 230,'add8e6'],
+    "lightgrey": [211, 211, 211,'d3d3d3'],
+    "black": [0, 0, 0,'000000'],
+    "darkblue": [0, 0, 139,'00008b'],
+    "darkgreen": [0, 100, 0,'006400'],
+    "darkslateblue": [72, 61, 139,'483d8b'],
+    "darkslategrey": [47, 79, 79,'2f4f4f']
   }
 
   const titles = {

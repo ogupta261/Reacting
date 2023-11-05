@@ -2,12 +2,12 @@ import React, { useEffect } from 'react'
 import Card from './Card'
 import self from '../Images/om-gupta.jpeg'
 
+
 export default function About(props) {
 
     useEffect(() => {
         props.setActivePage('about-us')
     })
-
     return (
         <div className='row' style={{ color: props.secondary }}>
             <div className="d-flex justify-content-center align-items-center flex-wrap my-2 animate">
@@ -22,9 +22,6 @@ export default function About(props) {
                 </div>
             </div>
             <div className="card text-center mx-auto border-0 animate bg-transparent" style={{ color: props.secondary, backgroundColor: props.primary }}>
-               {/* <div className="card-header">
-                    Quote
-                </div> */}
                 <div className="card-body">
                     <blockquote className="blockquote mb-0">
                         <p>You always have a little left in you. Try and DO MORE!</p>
