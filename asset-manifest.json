@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/Reacting/static/css/main.d6022096.css",
-    "main.js": "/Reacting/static/js/main.58bcc377.js",
+    "main.js": "/Reacting/static/js/main.f55bc6a0.js",
     "static/js/787.719ec76d.chunk.js": "/Reacting/static/js/787.719ec76d.chunk.js",
     "static/media/abstract_pattern_design_background_2007.jpg": "/Reacting/static/media/abstract_pattern_design_background_2007.54c479bbfeef7cb872f8.jpg",
     "static/media/more.gif": "/Reacting/static/media/more.3fb26d9b3c3c823ae786.gif",
     "static/media/text-utils.png": "/Reacting/static/media/text-utils.3f708f11a0f6708cbbc9.png",
-    "static/media/wissen.png": "/Reacting/static/media/wissen.fc188ad74ff4a32443ac.png",
+    "static/media/wissen.png": "/Reacting/static/media/wissen.ddea040bffa1c783472b.png",
     "static/media/om-gupta.jpeg": "/Reacting/static/media/om-gupta.66e82c830ccdc70d8883.jpeg",
-    "static/media/capgemini.png": "/Reacting/static/media/capgemini.fa105d41306f74ab3f43.png",
-    "static/media/intraedge.png": "/Reacting/static/media/intraedge.9fd099518c3df76b303c.png",
+    "static/media/capgemini.png": "/Reacting/static/media/capgemini.41ff438deca633afde9e.png",
+    "static/media/intraedge.png": "/Reacting/static/media/intraedge.eb1f1f26a74584217bd3.png",
     "index.html": "/Reacting/index.html",
     "main.d6022096.css.map": "/Reacting/static/css/main.d6022096.css.map",
-    "main.58bcc377.js.map": "/Reacting/static/js/main.58bcc377.js.map",
+    "main.f55bc6a0.js.map": "/Reacting/static/js/main.f55bc6a0.js.map",
     "787.719ec76d.chunk.js.map": "/Reacting/static/js/787.719ec76d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d6022096.css",
-    "static/js/main.58bcc377.js"
+    "static/js/main.f55bc6a0.js"
   ]
 }
