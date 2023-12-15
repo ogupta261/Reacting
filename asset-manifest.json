@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Reacting/static/css/main.d6022096.css",
-    "main.js": "/Reacting/static/js/main.af9a4577.js",
+    "main.js": "/Reacting/static/js/main.17f82fd3.js",
     "static/js/787.719ec76d.chunk.js": "/Reacting/static/js/787.719ec76d.chunk.js",
     "static/media/abstract_pattern_design_background_2007.jpg": "/Reacting/static/media/abstract_pattern_design_background_2007.54c479bbfeef7cb872f8.jpg",
     "static/media/more.gif": "/Reacting/static/media/more.3fb26d9b3c3c823ae786.gif",
@@ -12,11 +12,11 @@
     "static/media/intraedge.png": "/Reacting/static/media/intraedge.eb1f1f26a74584217bd3.png",
     "index.html": "/Reacting/index.html",
     "main.d6022096.css.map": "/Reacting/static/css/main.d6022096.css.map",
-    "main.af9a4577.js.map": "/Reacting/static/js/main.af9a4577.js.map",
+    "main.17f82fd3.js.map": "/Reacting/static/js/main.17f82fd3.js.map",
     "787.719ec76d.chunk.js.map": "/Reacting/static/js/787.719ec76d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d6022096.css",
-    "static/js/main.af9a4577.js"
+    "static/js/main.17f82fd3.js"
   ]
 }
