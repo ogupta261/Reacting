@@ -13,8 +13,8 @@ export default function Home(props) {
         <div className='text-center animate bg-transparent' style={{ color: props.secondary, backgroundColor: props.primary }}>
             <h1>Our Applications</h1>
             <div className="row g-2 justify-content-center align-items-center flex-wrap my-3">
-                <Card url='/text-utils' image={textUtilsImage} primary={props.secondary} secondary={props.primary} title='Text Utils' caption='Word Counter, Case Changing, Mutiple theme options'></Card>
-                <Card url='#' image={comingSoonImage} primary={props.secondary} secondary={props.primary} title='More Coming Soon!' ></Card>
+                <Card url='/text-utils' image={textUtilsImage} primary={props.secondary} secondary={props.primary} title='Text Utils' caption='Word Counter, Case Changing, Mutiple theme options'/>
+                <Card url='#' image={comingSoonImage} primary={props.secondary} secondary={props.primary} title='More Coming Soon!' />
             </div>
         </div>
     )

@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react'
 import Card from './Card'
 import self from '../Images/om-gupta.jpeg'
+import intraedge from '../Images/intraedge.png'
+import wissen from '../Images/wissen.png'
+import capgemini from '../Images/capgemini.png'
 
 
 export default function About(props) {
@@ -16,8 +19,13 @@ export default function About(props) {
                     <div className="card-body">
                         <h5 className="card-title">Om Gupta</h5>
                         <h6 className="card-subtitle mb-2">Full Stack Software Engineer</h6>
-                        <p className="card-text fw-lighter"><span className='fw-normal'>Phone :</span> <a href="tel:+919839007747" style={{ color: props.secondary }}>+91 9839007747</a><br /><span className='fw-normal'>Email :</span> <a href="mailto:ogupta261@gmail.com?subject=Reacting%20%3A%20I%20am%20interested%20in%20your%20profile&body=Hi%20Om%2C%0A%0AThis%20is%20regarding%20%3Cyour_purpose%3E.%0A%3Cyour_content%3E%0A%0ARegards%2C%0A%3Cyour_name%3E%0A%3Cyour_contact%3E%0A%0A***%20P.S.%20%3A%20you%20can%20edit%20the%20whole%20thing%20too%20%3AP%20***" style={{ color: props.secondary }}>ogupta261@gmail.com</a></p>
-                        {/* <p className="card-text"></p> */}
+                        <p className="card-text fw-lighter">
+                            <span className='fw-normal'>Phone :</span>
+                            <a href="tel:+919839007747" style={{ color: props.secondary }}>+91 9839007747</a>
+                            <br />
+                            <span className='fw-normal'>Email :</span>
+                            <a href="mailto:ogupta261@gmail.com?subject=Reacting%20%3A%20I%20am%20interested%20in%20your%20profile&body=Hi%20Om%2C%0A%0AThis%20is%20regarding%20%3Cyour_purpose%3E.%0A%3Cyour_content%3E%0A%0ARegards%2C%0A%3Cyour_name%3E%0A%3Cyour_contact%3E%0A%0A***%20P.S.%20%3A%20you%20can%20edit%20the%20whole%20thing%20too%20%3AP%20***" style={{ color: props.secondary }}>ogupta261@gmail.com</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -93,7 +101,45 @@ export default function About(props) {
                     </h2>
                     <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample" style={{ color: props.primary, backgroundColor: props.secondary }}>
                         <div className="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            <div className="d-flex flex-column">
+                                <div className="d-flex flex-row align-items-center flex-wrap">
+                                    <Card url='#' image={intraedge} primary={props.primary} secondary={props.secondary} title='Intraedge' caption='Jun-2023 TO Present' />
+                                    <div className="p-2" style={{ maxWidth: '900px' }}>
+                                        <h2>Senior Software Developer</h2>
+                                        <h6>Client : Citizens Bank</h6>
+                                        <ol type='i' className=''>
+                                            <li>Contributing to the development of Student Loan functionalities within a dynamic Angular-based user interface, utilizing Java, Spring Boot, and Microservices architecture.</li>
+                                            <li>Collaborating closely with Business Stackholders to conduct RCA and enhancing user experiencing by carefully mitigating issues.</li>
+                                            <li>Effectively managing the Extract, Transform, Load (ETL) processes, responsible for the daily generation of essential data sets, ensuring seamless operations and data integrity.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div className="d-flex flex-row align-items-center flex-wrap">
+                                    <Card url='#' image={wissen} primary={props.primary} secondary={props.secondary} title='Wissen' caption='Jun-2022 TO May-2022' />
+                                    <div className="p-2" style={{ maxWidth: '900px' }}>
+                                        <h2>Associate Software Engineer</h2>
+                                        <h6>Client : Goldman Sachs</h6>
+                                        <ol type='i'>
+                                            <li>Designed tools and controls to improve the speed and accuracy by <strong>30%</strong> of trade processes. Also, set up monitoring controls for trades after they've been completed, all within a comprehensive system for managing exceptions.</li>
+                                            <li>Designing and implementing models, robust controls, and optimized SQL queries by <strong>20-40%</strong> to facilitate the extraction of essential data and perform aggregations.</li>
+                                            <li>Conducted End-to-End Testing and diligent monitoring of all system components to ensure robust performance and reliability</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div className="d-flex flex-row align-items-center flex-wrap">
+                                    <Card url='#' image={capgemini} primary={props.primary} secondary={props.secondary} title='Capgemini' caption='Sep-2020 TO May-2022' />
+                                    <div className="p-2" style={{ maxWidth: '900px' }}>
+                                        <h2>Associate Consultant</h2>
+                                        <h6>Client : Kuehne + Nagel</h6>
+                                        <ol type='i'>
+                                            <li>Awarded with S.T.A.R. in 2021 for being consistent and efficient.</li>
+                                            <li>Crafting their Angular Web UI for seemless user experience in managing Air/Sea Freight.</li>
+                                            <li>Worked on Java Back-End building services and facade with a good understanding of Database design.</li>
+                                            <li>Mitigated <strong>36</strong> script-based and <strong>38</strong> issues while conducting RCA to improve user experience</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -105,7 +151,29 @@ export default function About(props) {
                     </h2>
                     <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample" style={{ color: props.primary, backgroundColor: props.secondary }}>
                         <div className="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            <div className="d-flex flex-row justify-content-evenly text-center flex-wrap">
+                                <div className="d-flex flex-column p-3 border border-0 rounded my-2" style={{ boxShadow: `0px 0px 5px 0.5px ${props.primary}`, minWidth: '300px', backgroundColor: props.primary, color: props.secondary }}>
+                                    <h4><strong>Chandigarh University</strong></h4>
+                                    <hr />
+                                    <strong className='fs-5'>Bachelor of Engineering</strong>
+                                    <h5>Major : Computer Science</h5>
+                                    <h5>CGPA : 7.48</h5>
+                                </div>
+                                <div className="d-flex flex-column p-3 border border-0 rounded my-2" style={{ boxShadow: `0px 0px 5px 0.5px ${props.primary}`, minWidth: '300px', backgroundColor: props.primary, color: props.secondary }}>
+                                    <h4><strong>Dr. V.S.E.C.</strong></h4>
+                                    <hr />
+                                    <strong className='fs-5'>Intermediate</strong>
+                                    <h5>Major : Science + Maths</h5>
+                                    <h5>GPA : 9.2</h5>
+                                </div>
+                                <div className="d-flex flex-column p-3 border border-0 rounded my-2 justify-content-center" style={{ boxShadow: `0px 0px 5px 0.5px ${props.primary}`, minWidth: '300px', backgroundColor: props.primary, color: props.secondary, transitionDelay: '2s' }}>
+                                    <h4 id='hs-school'><strong>Dr. V.S.E.C.</strong></h4>
+                                    <hr />
+                                    <strong className='fs-5'>High School</strong>
+                                    <h5>Major : Science</h5>
+                                    <h5>GPA : 8.8</h5>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
