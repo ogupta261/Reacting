@@ -105,9 +105,9 @@ export default function About(props) {
                         <div className="accordion-body">
                             <div className="d-flex flex-column">
                                 <div className="d-flex flex-row align-items-center flex-wrap">
-                                    <Card url='#' image={intraedge} primary={props.primary} secondary={props.secondary} title='Intraedge' caption='Jun-2023 TO Present' />
+                                    <Card url='#' image={wissen} primary={props.primary} secondary={props.secondary} title='Wissen Technology' caption='Feb-2024 TO Present' />
                                     <div className="p-2" style={{ maxWidth: '900px' }}>
-                                        <h2>Sr. Software Developer</h2>
+                                        <h2>Sr. Software Engineer</h2>
                                         <h6>Client : Goldman Sachs</h6>
                                         <ol type='I'>
                                             <li><strong>Management Information Alerts</strong> - Automated delivery of operational metrics with Spark, Kafka, and NiFi, ensuring 100% accuracy, zero deployment issues, and future-ready scheduling across daily to yearly timelines.</li>
@@ -118,9 +118,9 @@ export default function About(props) {
                                     </div>
                                 </div>
                                 <div className="d-flex flex-row align-items-center flex-wrap">
-                                    <Card url='#' image={intraedge} primary={props.primary} secondary={props.secondary} title='Intraedge' caption='Jun-2023 TO Present' />
+                                    <Card url='#' image={intraedge} primary={props.primary} secondary={props.secondary} title='Intraedge' caption='Jun-2023 TO Feb-2024' />
                                     <div className="p-2" style={{ maxWidth: '900px' }}>
-                                        <h2>Sr. Software Developer</h2>
+                                        <h2>Sr. Software Engineer</h2>
                                         <h6>Client : Citizens Bank</h6>
                                         <ol type='I'>
                                             <li><strong>Student Loan Application</strong> - Delivered high performance student loan features using Angular, Java and Spring Boot in a microservices architecture; delivering high-performance, enterprise-grade solutions.</li>
@@ -130,7 +130,7 @@ export default function About(props) {
                                     </div>
                                 </div>
                                 <div className="d-flex flex-row align-items-center flex-wrap">
-                                    <Card url='#' image={wissen} primary={props.primary} secondary={props.secondary} title='Wissen' caption='Jun-2022 TO May-2022' />
+                                    <Card url='#' image={wissen} primary={props.primary} secondary={props.secondary} title='Wissen Technology' caption='Jun-2022 TO May-2022' />
                                     <div className="p-2" style={{ maxWidth: '900px' }}>
                                         <h2>Associate Software Engineer</h2>
                                         <h6>Client : Goldman Sachs</h6>
