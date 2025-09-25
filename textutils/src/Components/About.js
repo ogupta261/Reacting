@@ -49,7 +49,9 @@ export default function About(props) {
                             <h3 className='mt-3 mb-2'>Programming Languages :</h3>
                             <div className="row g-2 justify-content-start align-items-center flex-wrap">
                                 <Card url='#' type='icon' iconClass='fa-brands fa-java' primary={props.primary} secondary={props.secondary} title='Java' />
+                                <Card url='#' type='icon' iconClass='fa-brands fa-square-js' primary={props.primary} secondary={props.secondary} title='TypeScript' />
                                 <Card url='#' type='icon' iconClass='fa-brands fa-square-js' primary={props.primary} secondary={props.secondary} title='JavaScript' />
+                                <Card url='#' type='icon' iconClass='fa-brands fa-glide-g' primary={props.primary} secondary={props.secondary} title='Python' />
                                 <Card url='#' type='icon' iconClass='fa-brands fa-glide-g' primary={props.primary} secondary={props.secondary} title='Groovy' />
                                 <Card url='#' type='icon' iconClass='fa-solid fa-diagram-project' primary={props.primary} secondary={props.secondary} title='GraphQL' />
                             </div>
@@ -59,8 +61,8 @@ export default function About(props) {
                                 <Card url='#' type='icon' iconClass='fa-brands fa-angular' primary={props.primary} secondary={props.secondary} title='Angular' />
                                 <Card url='#' type='icon' iconClass='fa-brands fa-react' primary={props.primary} secondary={props.secondary} title='React' />
                                 <Card url='#' type='icon' iconClass='fa-solid fa-database' primary={props.primary} secondary={props.secondary} title='Hibernate' />
-                                <Card url='#' type='icon' iconClass='fa-regular fa-star' primary={props.primary} secondary={props.secondary} title='Spark' />
-                                <Card url='#' type='icon' iconClass='fa-solid fa-share-nodes' primary={props.primary} secondary={props.secondary} title='Kafka' />
+                                <Card url='#' type='icon' iconClass='fa-regular fa-star' primary={props.primary} secondary={props.secondary} title='Apache Spark' />
+                                <Card url='#' type='icon' iconClass='fa-solid fa-share-nodes' primary={props.primary} secondary={props.secondary} title='Apache Kafka' />
                             </div>
                             <h3 className='mt-3 mb-2'>Methodologies and Design Patterns :</h3>
                             <div className="row g-2 justify-content-start align-items-center flex-wrap">
@@ -82,7 +84,7 @@ export default function About(props) {
                             <h3 className='mt-3 mb-2'>Version Control :</h3>
                             <div className="row g-2 justify-content-start align-items-center flex-wrap">
                                 <Card url='#' type='icon' iconClass='fa-brands fa-github' primary={props.primary} secondary={props.secondary} title='Github' />
-                                <Card url='#' type='icon' iconClass='fa-brands fa-gitlab' primary={props.primary} secondary={props.secondary} title='Github' />
+                                <Card url='#' type='icon' iconClass='fa-brands fa-gitlab' primary={props.primary} secondary={props.secondary} title='SVN' />
                             </div>
                             <h3 className='mt-3 mb-2'>Testing and Debugging :</h3>
                             <div className="row g-2 justify-content-start align-items-center flex-wrap">
@@ -105,12 +107,25 @@ export default function About(props) {
                                 <div className="d-flex flex-row align-items-center flex-wrap">
                                     <Card url='#' image={intraedge} primary={props.primary} secondary={props.secondary} title='Intraedge' caption='Jun-2023 TO Present' />
                                     <div className="p-2" style={{ maxWidth: '900px' }}>
-                                        <h2>Senior Software Developer</h2>
+                                        <h2>Sr. Software Developer</h2>
+                                        <h6>Client : Goldman Sachs</h6>
+                                        <ol type='I'>
+                                            <li><strong>Management Information Alerts</strong> - Automated delivery of operational metrics with Spark, Kafka, and NiFi, ensuring 100% accuracy, zero deployment issues, and future-ready scheduling across daily to yearly timelines.</li>
+                                            <li><strong>Parameter Management System</strong> - Engineered a secure, multi-step workflow for managing business parameters, improving change traceability and reinforcing operational security</li>
+                                            <li><strong>Org Chart</strong> - Built a custom multi-threaded solution for user onboarding, leveraging Excel-based bulk uploads, <strong>reducing manual effort by 80%</strong>.</li>
+                                            <li><strong>WiseEngage</strong> - Developed a React Native social media app for localized employee engagement, actively used within the organization to foster internal communication and participation.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div className="d-flex flex-row align-items-center flex-wrap">
+                                    <Card url='#' image={intraedge} primary={props.primary} secondary={props.secondary} title='Intraedge' caption='Jun-2023 TO Present' />
+                                    <div className="p-2" style={{ maxWidth: '900px' }}>
+                                        <h2>Sr. Software Developer</h2>
                                         <h6>Client : Citizens Bank</h6>
-                                        <ol type='i' className=''>
-                                            <li>Contributing to the development of Student Loan functionalities within a dynamic Angular-based user interface, utilizing Java, Spring Boot, and Microservices architecture.</li>
-                                            <li>Collaborating closely with Business Stackholders to conduct RCA and enhancing user experiencing by carefully mitigating issues.</li>
-                                            <li>Effectively managing the Extract, Transform, Load (ETL) processes, responsible for the daily generation of essential data sets, ensuring seamless operations and data integrity.</li>
+                                        <ol type='I'>
+                                            <li><strong>Student Loan Application</strong> - Delivered high performance student loan features using Angular, Java and Spring Boot in a microservices architecture; delivering high-performance, enterprise-grade solutions.</li>
+                                            <li>Collaborated closely with business teams <strong>reducing incident reports by 20%</strong>, performing detailed root cause analysis, driving a <strong>30% boost in user satisfaction</strong>.</li>
+                                            <li>Managed and monitored automated report generation jobs in coordination with the data team, <strong>ensuring 100% data accuracy</strong> and uninterrupted business operations.</li>
                                         </ol>
                                     </div>
                                 </div>
@@ -119,10 +134,9 @@ export default function About(props) {
                                     <div className="p-2" style={{ maxWidth: '900px' }}>
                                         <h2>Associate Software Engineer</h2>
                                         <h6>Client : Goldman Sachs</h6>
-                                        <ol type='i'>
-                                            <li>Designed tools and controls to improve the speed and accuracy by <strong>30%</strong> of trade processes. Also, set up monitoring controls for trades after they've been completed, all within a comprehensive system for managing exceptions.</li>
-                                            <li>Designing and implementing models, robust controls, and optimized SQL queries by <strong>20-40%</strong> to facilitate the extraction of essential data and perform aggregations.</li>
-                                            <li>Conducted End-to-End Testing and diligent monitoring of all system components to ensure robust performance and reliability</li>
+                                        <ol type='I'>
+                                            <li><strong>Post Trade Processing</strong> - Designed and implemented pipelines for <strong>processing large volumes of trading data</strong>, enhancing data integration and processing speed across complex financial systems to support <strong>real-time decision-making</strong> in an event-driven architecture.</li>
+                                            <li>Enhanced market data applications and optimized SQL queries, resolving system issues and improving data reliability.</li>
                                         </ol>
                                     </div>
                                 </div>
@@ -131,11 +145,10 @@ export default function About(props) {
                                     <div className="p-2" style={{ maxWidth: '900px' }}>
                                         <h2>Associate Consultant</h2>
                                         <h6>Client : Kuehne + Nagel</h6>
-                                        <ol type='i'>
-                                            <li>Awarded with S.T.A.R. in 2021 for being consistent and efficient.</li>
-                                            <li>Crafting their Angular Web UI for seemless user experience in managing Air/Sea Freight.</li>
-                                            <li>Worked on Java Back-End building services and facade with a good understanding of Database design.</li>
-                                            <li>Mitigated <strong>36</strong> script-based and <strong>38</strong> issues while conducting RCA to improve user experience</li>
+                                        <ol type='I'>
+                                            <li><strong>Logistics Management System</strong> - Designed and built a modern Angular UI web application ensuring seamless integration, deprecating old Java Swing Client; built a reusable Auto-Complete component.</li>
+                                            <li>Honored with the <strong>2021 S.T.A.R. Award</strong> for successfully delivering high-quality application aligned with business goals and user expectations.</li>
+                                            <li>Resolved over 70+ critical bugs, <strong>improving overall system stability by 25%</strong>.</li>
                                         </ol>
                                     </div>
                                 </div>
