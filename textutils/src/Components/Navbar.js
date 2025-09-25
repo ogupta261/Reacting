@@ -37,7 +37,7 @@ export default function Navbar(props) {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/about-us">
-                <button disabled={props.activePage === 'about-us'} style={{ background: `linear-gradient(transparent, transparent)`, color: props.secondary, borderColor: props.secondary }} type="button" className="btn w-100 rounded-pill animate">About Us</button>
+                <button disabled={props.activePage === 'about-us'} style={{ background: `linear-gradient(transparent, transparent)`, color: props.secondary, borderColor: props.secondary }} type="button" className="btn w-100 rounded-pill animate">About Me</button>
               </Link>
             </li>
           </ul>
