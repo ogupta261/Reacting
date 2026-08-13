@@ -119,6 +119,18 @@ export default function About(props) {
                         <div className="accordion-body">
                             <div className="d-flex flex-column">
                                 <div className="d-flex flex-row align-items-center flex-wrap">
+                                    <Card url='#' image={wissen} primary={props.primary} secondary={props.secondary} title='Wissen Technology' caption='Nov-2025 TO Present' />
+                                    <div className="p-2" style={{ maxWidth: '900px' }}>
+                                        <h2>Sr. Software Engineer</h2>
+                                        <h6>Client : Morgan Stanley</h6>
+                                        <ol type='I'>
+                                            <li><strong>Asset Transfers, Prime Brokerage</strong> -- Optimized transaction processing workflows, <strong>reducing processing time by 66.67%</strong> and improving operational efficiency across asset transfer activities.</li>
+                                            <li><strong>Fax Tracking</strong> -- Enabled sending and tracking of faxes through email-based workflows, improving transaction visibility and reducing manual follow-ups.</li>
+                                            <li><strong>Transaction Execution Product</strong> -- Integrated a new transaction execution product into existing workflows, enabling a <strong>phased migration</strong> while maintaining business continuity.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div className="d-flex flex-row align-items-center flex-wrap">
                                     <Card url='#' image={wissen} primary={props.primary} secondary={props.secondary} title='Wissen Technology' caption='Feb-2024 TO Present' />
                                     <div className="p-2" style={{ maxWidth: '900px' }}>
                                         <h2>Sr. Software Engineer</h2>
@@ -144,7 +156,7 @@ export default function About(props) {
                                     </div>
                                 </div>
                                 <div className="d-flex flex-row align-items-center flex-wrap">
-                                    <Card url='#' image={wissen} primary={props.primary} secondary={props.secondary} title='Wissen Technology' caption='Jun-2022 TO May-2022' />
+                                    <Card url='#' image={wissen} primary={props.primary} secondary={props.secondary} title='Wissen Technology' caption='Jun-2022 TO May-2023' />
                                     <div className="p-2" style={{ maxWidth: '900px' }}>
                                         <h2>Associate Software Engineer</h2>
                                         <h6>Client : Goldman Sachs</h6>
